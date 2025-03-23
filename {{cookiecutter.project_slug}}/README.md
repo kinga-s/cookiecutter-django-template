@@ -33,7 +33,7 @@ On Windows (PowerShell):
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 ```
-### Configure Python 3.13 (your_app_name) as a project interpreter.
+#### Configure Python 3.13 (your_app_name) as a project interpreter.
 
 ## 2. Install Poetry and dependencies
 Install or upgrade pip to the latest version.
@@ -61,33 +61,7 @@ pre-commit install
 ```
 
 ## 3. Django Project Environment Setup
-Django project is using python-decouple. It should be already installed using poetry. All you have to do is create a .env file in the root of your Django project (next to manage.py) and define the required environment variables:
-```
-# Django settings
-DJANGO_SECRET_KEY=your-secret-key
-DJANGO_DEBUG=True
-DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1
-
-# Database settings
-DB_ENGINE=django.db.backends.postgresql
-DB_NAME=yourdatabase
-DB_USER=youruser
-DB_PASSWORD=yourpassword
-DB_HOST=localhost
-DB_PORT=5432
-
-# Static and media settings
-STATIC_ROOT=/var/www/static/
-MEDIA_ROOT=/var/www/media/
-
-# Security settings
-SECURE_SSL_REDIRECT=False
-CSRF_COOKIE_SECURE=False
-
-# Internationalization
-LANGUAGE_CODE=en-us
-TIME_ZONE=Europe/Warsaw
-```
+Define environment variables in a .env file.
 
 ## 4. Start database
 First, make sure you have Docker installed and started.
