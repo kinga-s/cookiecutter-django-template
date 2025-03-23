@@ -1,0 +1,23 @@
+repos:
+  - repo: local
+    hooks:
+      - id: black
+        name: Black (Poetry)
+        entry: poetry run black
+        language: system
+        types: [python]
+        args: [{{cookiecutter.project_slug}}]
+
+      - id: isort
+        name: isort (Poetry)
+        entry: poetry run isort
+        language: system
+        types: [python]
+        args: [{{cookiecutter.project_slug}}]
+
+      - id: flake8
+        name: flake8 (Poetry)
+        entry: poetry run flake8
+        language: system
+        types: [python]
+        args: [{{cookiecutter.project_slug}}]
