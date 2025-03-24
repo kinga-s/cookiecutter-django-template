@@ -1,7 +1,7 @@
 services:
   postgres:
     image: postgres:latest
-    container_name: postgres_container
+    container_name: {{cookiecutter.container_name}}
     restart: always
     environment:
       POSTGRES_USER: ${DB_USER}
@@ -10,7 +10,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - {{cookiecutter.volumes}}:/var/lib/postgresql/data
 
 volumes:
-  postgres_data:
+  {{cookiecutter.volumes}}:

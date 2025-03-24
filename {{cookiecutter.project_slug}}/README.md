@@ -55,6 +55,11 @@ Install project dependencies:
 poetry install
 ```
 
+Initialize git:
+```shell
+git init
+```
+
 Initialize pre-commit in your repository:
 ```shell
 pre-commit install
